@@ -154,7 +154,8 @@ plt.xlabel('epoch')
 plt.legend(['train', 'validation'], loc = 'upper left')
 
 # predicting an image now 
-
+# giving the path where our image is saved
+# By following the same procedure that is being followed above that is first reading and resizing and reshaping the image to our desired dimension
 import cv2
 import tensorflow as tf
 
@@ -170,4 +171,7 @@ image = prepare("C:/Users/DELL/Pictures/Camera Roll/moda.jpg")
 prediction = model.predict([image])
 prediction = list(prediction[0])
 print(Categories[prediction.index(max(prediction))])
-                    
+                   
+
+ 
+  
